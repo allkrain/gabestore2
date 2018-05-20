@@ -768,6 +768,10 @@
     left: 0;
     right: auto;
   }
+  
+  .recommendation--left.recommendation--longimg .recommendation__image {
+    height: 137% ;
+  }
 }
 
 @media screen and (min-width: 631px) {
@@ -779,6 +783,10 @@
     width: auto;
     max-width: 60%;
     max-height: 100%;
+  }
+  
+  .recommendation--banner.recommendation--longimg2 .recommendation__image {
+    max-height: 126%;
   }
 }
 
