@@ -881,6 +881,7 @@
 }
 
 .recommendation__title-text {
+  -webkit-transition: border .3s ease;
   transition: border .3s ease;
   border-bottom: 1px solid rgba(255, 255, 255, .5);
 }
@@ -1016,41 +1017,33 @@
 }
 
 .recommendation--banner {
-  margin-bottom: 38px;
+  /* margin-bottom: 38px; */
+  margin-bottom: 70px;
 }
 
 .recommendation-grid {
-  margin-bottom: 58px;
+  /* margin-bottom: 58px; */
+  margin-bottom: 46px;
 }
 
 .recommendation-grid:last-child {
-  margin-bottom: 104px;
+  /* margin-bottom: 104px; */
+  margin-bottom: 70px;
 }
 
-.recommendation-grid--mgb-big,
+/* .recommendation-grid--mgb-big,
 .recommendation-grid--mgb-big:last-child {
   margin-bottom: 235px;
-}
+} */
 
 .recommendation-grid--mgtop {
-  margin-top: 62px;
-}
-
-.btn--long-grid {
-  display: table;
-  margin: 30px auto;
-  padding-left: 23px;
-  padding-right: 26px;
-  font-size: 16px;
-  letter-spacing: .02em;
-}
-
-.btn--long-grid .iconic--grid {
-  margin-right: 10px;
+  /* margin-top: 62px; */
+  margin-top: 30px;
 }
 
 .recommendation-list {
-  margin-bottom: 130px;
+  /* margin-bottom: 130px; */
+  margin-bottom: 40px;
 }
 
 .game-card {
@@ -1266,9 +1259,42 @@
 }
 
 .game-list {
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
+  margin-bottom: 30px;
 }
 
 .game-list form {
   margin-bottom: 44px;
+}
+
+.btn--long-grid {
+  display: table;
+  margin: 30px auto;
+  padding-left: 23px;
+  padding-right: 26px;
+  font-size: 16px;
+  letter-spacing: .02em;
+}
+
+.btn--long-grid .iconic--grid {
+  margin-right: 10px;
+}
+
+.btn--long {
+  background-color: #fff;
+  width: 100%;
+  margin: 30px 0;
+  padding: 14px 18px;
+  border: 1px solid #d9d9d9;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: .02em;
+  color: #111;
+  -webkit-transition-property: all;
+  transition-property: all;
+}
+
+.btn--long:hover {
+  opacity: .7;
 }
