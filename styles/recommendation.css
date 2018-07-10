@@ -954,6 +954,18 @@
   background-color: #a7d0cc;
 }
 
+.recommendation--yellow-orange {
+  background-color: #ffbe4a;
+}
+
+.recommendation--green {
+  background-color: #2e9e88;
+}
+
+.recommendation--blood {
+  background-color: #8c0025;
+}
+
 @media screen and (max-width: 630px) {
   .recommendation--lilac .recommendation__content {
     background: -webkit-gradient(linear, right top, left top, color-stop(15%, rgba(140, 160, 211, 0)) , color-stop(50%, rgba(140, 160, 211, .5)), to(rgba(140, 160, 211, 0))) 50% 50% repeat;
@@ -1014,35 +1026,40 @@
     background: -webkit-gradient(linear, right top, left top, color-stop(15%, rgba(167, 208, 204, 0)) , color-stop(50%, rgba(167, 208, 204, .5)), to(rgba(167, 208, 204, 0))) 50% 50% repeat;
     background: linear-gradient(to left, rgba(167, 208, 204, 0) 15% , rgba(167, 208, 204, .5) 50%, rgba(167, 208, 204, 0) 100%) 50% 50% repeat;
   }
+
+  .recommendation--yellow-orange .recommendation__content {
+    background: -webkit-gradient(linear, right top, left top, color-stop(15%, rgba(255, 190, 74, 0)) , color-stop(50%, rgba(255, 190, 74, .5)), to(rgba(255, 190, 74, 0))) 50% 50% repeat;
+    background: linear-gradient(to left, rgba(255, 190, 74, 0) 15% , rgba(255, 190, 74, .5) 50%, rgba(255, 190, 74, 0) 100%) 50% 50% repeat;
+  }
+
+  .recommendation--green .recommendation__content {
+    background: -webkit-gradient(linear, right top, left top, color-stop(15%, rgba(46,158,136, 0)) , color-stop(50%, rgba(46,158,136, .5)), to(rgba(46,158,136, 0))) 50% 50% repeat;
+    background: linear-gradient(to left, rgba(46,158,136, 0) 15% , rgba(46,158,136, .5) 50%, rgba(46,158,136, 0) 100%) 50% 50% repeat;
+  }
+
+  .recommendation--blood .recommendation__content {
+    background: -webkit-gradient(linear, right top, left top, color-stop(15%, rgba(140,0,37, 0)) , color-stop(50%, rgba(140,0,37, .5)), to(rgba(140,0,37, 0))) 50% 50% repeat;
+    background: linear-gradient(to left, rgba(140,0,37, 0) 15% , rgba(140,0,37, .5) 50%, rgba(140,0,37, 0) 100%) 50% 50% repeat;
+  }
 }
 
 .recommendation--banner {
-  /* margin-bottom: 38px; */
   margin-bottom: 70px;
 }
 
 .recommendation-grid {
-  /* margin-bottom: 58px; */
   margin-bottom: 46px;
 }
 
 .recommendation-grid:last-child {
-  /* margin-bottom: 104px; */
   margin-bottom: 70px;
 }
 
-/* .recommendation-grid--mgb-big,
-.recommendation-grid--mgb-big:last-child {
-  margin-bottom: 235px;
-} */
-
 .recommendation-grid--mgtop {
-  /* margin-top: 62px; */
   margin-top: 30px;
 }
 
 .recommendation-list {
-  /* margin-bottom: 130px; */
   margin-bottom: 40px;
 }
 

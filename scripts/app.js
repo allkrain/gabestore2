@@ -326,7 +326,7 @@ function elemInView(t, e) {
                 u = $(".js-catalog-loadout"),
                 f = $(".js-catalog_more-btn"),
                 p = l.find(".js-ranges"),
-                h = p[0].noUiSlider,
+                h = p[0] ? p[0].noUiSlider : '',
                 m = !0,
                 v = 0,
                 g = d.find(".js-filter-param"),
@@ -351,9 +351,9 @@ function elemInView(t, e) {
                     var s = window.location.search;
                     s && s != T && (e(0, !0, !1), T = s, console.log("popstate happens"))
                 }
-            }, !1), h.on("update", function() {
+            }, !1), h ? h.on("update", function() {
                 return m && 2 == v ? void e(400, !0) : void(2 != v && (v += 1))
-            }), b.bind("click", function() {
+            }) : '', b.bind("click", function() {
                 var t = $(this),
                     s = t.find("input"),
                     n = t.hasClass("_active"),

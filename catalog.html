@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Gabestore – интернет-магазин лицензионных ключей</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <meta name="csrf-param" content="_csrf">
+  <meta name="csrf-token" content="OS04Nkw2N2J9YglCInQPFVIcXAcHRgQYUR57ewlZfxtAT1JaIGFkMg==">
+  <link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+  <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/favicon/manifest.json">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#999">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="a0ba4cf766.js"></script>
+
+  <link href='styles/lib.css' rel='stylesheet' type='text/css'>
+  <link href='styles/app.css' rel='stylesheet' type='text/css'>
+  <link href='styles/recommendation.min.css' rel='stylesheet'>
+  <link href='styles/jquery.scrollbar.css' rel='stylesheet'>
+  <link href='styles/catalog.css' rel='stylesheet'>
+
+  <meta name="description" content="Интернет-магазин Gabestore. Продажа лицензионных ключей steam, uplay, origin, gog, battle.net по разумным ценам.">
+  <script src="scripts/vendor/modernizr.js"></script>
+  <script src="scripts/jquery-2.2.4.min.js"></script>
+  <meta name="google-site-verification" content="5IMmBCk-JFF0ZKuXaGBKIOzYcfb-TCJJUfq7pSXGYFg" />
+</head>
+
+<body>
+
+  <div class="page ">
+    <div class="page-inner">
+      <header class="header js-header">
+        <div class="header__top">
+          <div class="wrapper">
+            <div class="header-mob">
+              <div class="header-mob-btn js-mob-btn">
+                <button type="button" class="header-mob-btn__bars">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <button type="button" class="header-mob-btn__close iconic iconic--cross"></button>
+              </div>
+              <nav class="header-mob__menu wrapper">
+                <ul class="header-mob__list">
+                  <li>
+                    <a href="https://gabestore.ru/catalog">Каталог игр</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/rand">Испытай удачу</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/top">Лидеры продаж</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/newgames">Новинки</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/preorder">Предзаказы</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/sale">Скидки</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/payment-cards">Карты оплаты </a>
+                  </li>
+                </ul>
+
+                <ul class="header-mob__list header-mob__list--sm">
+                  <li>
+                    <a href="https://gabestore.ru/page/how-to-buy">Как купить?</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/page/payment">Оплата</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/page/bonus">Бонусы</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/page/guarantee">Гарантии</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/page/contacts">Контакты</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/page/review">Отзывы</a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/profile/my-purchases">Мои покупки</a>
+                  </li>
+                </ul>
+              </nav>
+
+            </div>
+
+            <a href="https://gabestore.ru/" class="header__logo">
+              <img src="images/logo.png" alt="GabeShop">
+            </a>
+
+            <div class="currency__dropdown">
+              <div class="dropdown js-dropdown" id="currency-listall">
+                <div class="dropdown__head-mob">
+                  <select class="dropdown__head" id="currency-list" onchange="currencyList()">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="RUB">RUB</option>
+                    <option value="UAH">UAH</option>
+                  </select>
+                </div>
+                <div class="dropdown__head-main">
+                  <div class="dropdown__head js-dropdown-btn">
+                    <font id="currency_now">RUB</font>
+                  </div>
+                  <div class="dropdown__cont">
+                    <ul class="currency__list">
+                      <li class="currency__list-item" onclick="currencySelect('USD')" id="currency_USD">
+                        USD<span class="currency__symbol">$</span>
+                      </li>
+                      <li class="currency__list-item" onclick="currencySelect('EUR')" id="currency_EUR">
+                        EUR<span class="currency__symbol">€</span>
+                      </li>
+                      <li class="currency__list-item" onclick="currencySelect('RUB')" id="currency_RUB">
+                        RUB<span class="currency__symbol"><span class='rub'>P</span></span>
+                      </li>
+                      <li class="currency__list-item" onclick="currencySelect('UAH')" id="currency_UAH">
+                        UAH<span class="currency__symbol">₴</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script type="text/javascript">
+            var poolCurrency = {
+              "RUB": 1,
+              "USD": 61,
+              "EUR": 73,
+              "UAH": 2.3
+            };
+            </script>
+
+            <div class="header__main-col">
+
+              <div class="header__info-wr">
+                <ul class="header__info-links">
+                  <li>
+                    <a href="https://gabestore.ru/page/how-to-buy" class="link link--black">
+                      Как купить?
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/page/payment" class="link link--black">
+                      Оплата
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/page/bonus" class="link link--black">
+                      Бонусы
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/page/guarantee" class="link link--black">
+                      Гарантии
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://gabestore.ru/page/contacts" class="link link--black">
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+
+                <a href="https://gabestore.ru/page/review" class="header-ico-link">
+                  <span class="iconic iconic--favs header-ico-link__ico"></span>
+                  <span class="header-ico-link__txt">
+                    Отзывы
+                  </span>
+                </a>
+                <a href="https://gabestore.ru/profile/my-purchases" class="header-ico-link">
+                  <span class="header-ico-link__ico header-ico-link__ico--cart">
+                  </span>
+                  <span class="header-ico-link__txt">
+                    Мои покупки
+                  </span>
+                </a>
+
+              </div>
+
+              <div class="search-div">
+
+                <div class="search-wr js-live-search" data-delay="1000" data-url="/search/autocomplete">
+                  <form action="/catalog" class="search-wr__main" method="get">
+                    <input value="" type="search" name="ProductFilter[search]" class="search-wr__input js-live-search_input" placeholder="Поиск игр..." autocomplete="off" id="game-search-input">
+
+                    <div class="search-wr__btns-pair">
+                      <button type="submit" class="iconic iconic--lupa search-wr__submit"></button>
+                    </div>
+                  </form>
+
+                  <div class="search-wr__loadout-wr js-live-search_loadout-wr">
+                    <div class="search-wr__loadout js-live-search_loadout"></div>
+                    <div class="search-wr__loadout-bot">
+                      <a href="https://gabestore.ru/" class="search-wr__loadout-bot-link js-live-search_all-link">
+                        Все результаты
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <p class="search-div__txt">
+                  В лавке дядюшки Гейба более 900 игр
+                </p>
+              </div>
+            </div>
+
+            <button type="button" class="iconic iconic--lupa header__mob-search js-search-toggle"></button>
+          </div>
+        </div>
+
+        <div class="header__nav">
+          <div class="wrapper">
+            <nav class="header-nav">
+              <div class="header-nav__group">
+                <a href="https://gabestore.ru/catalog" class="header-nav__gr-link">
+                  <span class="header-nav__gr-link-txt">
+                    Каталог игр
+                  </span>
+                </a>
+
+                <div class="header-nav__submenu">
+                  <div class="wrapper">
+                    <a href="https://gabestore.ru/games/action" class="header-nav__smenu-item">
+                      <div class="header-nav__smenu-ico">
+                        <!--<img src="images/mario_body.png" alt="">-->
+                        <span class="iconic iconic--cat-action"></span>
+                      </div>
+                      <p class="header-nav__smenu-name">
+                        Экшн
+                      </p>
+                    </a>
+
+                    <a href="https://gabestore.ru/games/adventure" class="header-nav__smenu-item">
+                      <div class="header-nav__smenu-ico">
+                        <span class="iconic iconic--cat-adventure"></span>
+                      </div>
+                      <p class="header-nav__smenu-name">
+                        приключения
+                      </p>
+                    </a>
+
+                    <a href="https://gabestore.ru/games/rpg" class="header-nav__smenu-item">
+                      <div class="header-nav__smenu-ico">
+                        <span class="iconic iconic--cat-rpg"></span>
+                      </div>
+                      <p class="header-nav__smenu-name">
+                        ролевые (RPG)
+                      </p>
+                    </a>
+
+                    <a href="https://gabestore.ru/games/simulator" class="header-nav__smenu-item">
+                      <div class="header-nav__smenu-ico">
+                        <span class="iconic iconic--cat-sim"></span>
+                      </div>
+                      <p class="header-nav__smenu-name">
+                        симуляторы
+                      </p>
+                    </a>
+
+                    <a href="https://gabestore.ru/games/strategy" class="header-nav__smenu-item">
+                      <div class="header-nav__smenu-ico">
+                        <span class="iconic iconic--cat-strategy"></span>
+                      </div>
+                      <p class="header-nav__smenu-name">
+                        стратегии
+                      </p>
+                    </a>
+
+                    <a href="https://gabestore.ru/games/online" class="header-nav__smenu-item">
+                      <div class="header-nav__smenu-ico">
+                        <span class="iconic iconic--cat-mmo"></span>
+                      </div>
+                      <p class="header-nav__smenu-name">
+                        онлайн
+                      </p>
+                    </a>
+
+                    <a href="https://gabestore.ru/games/arcade" class="header-nav__smenu-item">
+                      <div class="header-nav__smenu-ico">
+                        <span class="iconic iconic--cat-arcade"></span>
+                      </div>
+                      <p class="header-nav__smenu-name">
+                        аркады
+                      </p>
+                    </a>
+                    <a href="https://gabestore.ru/games/sport-racing" class="header-nav__smenu-item">
+                      <div class="header-nav__smenu-ico">
+                        <span class="iconic iconic--cat-sport"></span>
+                      </div>
+                      <p class="header-nav__smenu-name">
+                        спорт и гонки
+                      </p>
+                    </a>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="header-nav__group">
+                <a href="https://gabestore.ru/rand" class="header-nav__gr-link">
+                  <span class="header-nav__gr-link-txt">
+                    Испытай удачу
+                  </span>
+                </a>
+
+              </div>
+
+              <div class="header-nav__group">
+                <a href="https://gabestore.ru/top" class="header-nav__gr-link">
+                  <span class="header-nav__gr-link-txt">
+                    Лидеры продаж
+                  </span>
+                </a>
+
+              </div>
+
+              <div class="header-nav__group">
+                <a href="https://gabestore.ru/newgames" class="header-nav__gr-link">
+                  <span class="header-nav__gr-link-txt">
+                    Новинки
+                  </span>
+                </a>
+
+              </div>
+
+
+
+              <div class="header-nav__group">
+                <a href="https://gabestore.ru/preorder" class="header-nav__gr-link">
+                  <span class="header-nav__gr-link-txt">
+                    Предзаказы
+                  </span>
+                </a>
+
+              </div>
+
+              <div class="header-nav__group">
+                <a href="https://gabestore.ru/sale" class="header-nav__gr-link">
+                  <span class="header-nav__gr-link-txt">
+                    Скидки
+                    <sup>
+                      до 90%
+                    </sup>
+                  </span>
+                </a>
+
+              </div>
+
+              <div class="header-nav__group">
+                <a href="https://gabestore.ru/payment-cards" class="header-nav__gr-link">
+                  <span class="header-nav__gr-link-txt">
+                    Карты оплаты
+                  </span>
+                </a>
+
+              </div>
+
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="page-body catalog-page">
+        <section class="page-header">
+          <div class="wrapper">
+            <div class="page-header__content">
+              <div class="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li class="breadcrumbs__li">
+                      <a class="breadcrumbs__link link link--grey" href="/">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__li">
+                      <h1>Каталог</h1>
+                    </li>
+                  </ul>
+              </div>
+              <h2 class="page-title">Найдено 1023 игры</h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="catalog-collections">
+          <div class="wrapper">
+            <div class="grid">
+             
+              <div class="grid__col grid__col--4">
+                <a class="collection collection_big" href="#">
+                  <span class="collection__image">
+                    <img src="images/catalog/collection1.png" alt="@@">
+                  </span>
+                  <span class="collection__content">
+                    <span class="collection__count">22 игры</span>
+                    <span class="collection__title"><span class="collection__title-text">Рекомендуемые<br> подборки</span></span>
+                    <span class="collection__price">от <span class="collection__price-text">23 руб.</span></span>
+                  </span>
+                </a>
+              </div>
+              
+              <div class="grid__col grid__col--4">
+                <a class="collection collection_big" href="#">
+                  <div class="collection__image">
+                    <img src="images/catalog/collection2.png" alt="@@">
+                  </div>
+                  <span class="collection__content">
+                    <span class="collection__count">22 игры</span>
+                    <span class="collection__title"><span class="collection__title-text">Карты<br> оплаты</span></span>
+                    <span class="collection__price">от <span class="collection__price-text">23 руб.</span></span>
+                  </span>
+                </a>
+              </div>
+              
+              <div class="grid__col grid__col--4">
+                <a class="collection collection_big" href="#">
+                  <div class="collection__image">
+                    <img src="images/catalog/collection5.png" alt="@@">
+                  </div>
+                  <span class="collection__content">
+                    <span class="collection__count">22 игры</span>
+                    <span class="collection__title"><span class="collection__title-text">Дополнения<br> и DLC</span></span>
+                    <span class="collection__price">от <span class="collection__price-text">23 руб.</span></span>
+                  </span>
+                </a>
+              </div>
+              
+              <div class="grid__col grid__col--6 grid__col--xl_3">
+                <a class="collection" href="#">
+                  <span class="collection__content">
+                    <span class="collection__count">22 игры</span>
+                    <span class="collection__title"><span class="collection__title-text">Лидеры продаж<br> Steam</span></span>
+                    <span class="collection__price">от <span class="collection__price-text">23 руб.</span></span>
+                  </span>
+                </a>
+              </div>
+              
+              <div class="grid__col grid__col--6 grid__col--xl_3">
+                <a class="collection" href="#">
+                  <span class="collection__content">
+                    <span class="collection__count">22 игры</span>
+                    <span class="collection__title"><span class="collection__title-text">Новинки<br> Steam</span></span>
+                    <span class="collection__price">от <span class="collection__price-text">23 руб.</span></span>
+                  </span>
+                </a>
+              </div>
+              
+              <div class="grid__col grid__col--6 grid__col--xl_3">
+                <a class="collection" href="#">
+                  <span class="collection__content">
+                    <span class="collection__count">22 игры</span>
+                    <span class="collection__title"><span class="collection__title-text">Лидеры продаж<br> Uplay</span></span>
+                    <span class="collection__price">от <span class="collection__price-text">23 руб.</span></span>
+                  </span>
+                </a>
+              </div>
+              
+              <div class="grid__col grid__col--6 grid__col--xl_3">
+                <a class="collection" href="#">
+                  <span class="collection__content">
+                    <span class="collection__count">22 игры</span>
+                    <span class="collection__title"><span class="collection__title-text">Новинки<br> Uplay</span></span>
+                    <span class="collection__price">от <span class="collection__price-text">23 руб.</span></span>
+                  </span>
+                </a>
+              </div>
+              
+              <div class="grid__col grid__col--4">
+                <a class="collection collection_big" href="#">
+                  <div class="collection__image">
+                    <img src="images/catalog/collection3.png" alt="@@">
+                  </div>
+                  <span class="collection__content">
+                    <span class="collection__count">22 игры</span>
+                    <span class="collection__title"><span class="collection__title-text">Большие<br> скидки</span></span>
+                    <span class="collection__price">от <span class="collection__price-text">23 руб.</span></span>
+                  </span>
+                </a>
+              </div>
+              
+              <div class="grid__col grid__col--4">
+                <a class="collection collection_big" href="#">
+                  <div class="collection__image">
+                    <img src="images/catalog/collection4.png" alt="@@">
+                  </div>
+                  <span class="collection__content">
+                    <span class="collection__count">22 игры</span>
+                    <span class="collection__title"><span class="collection__title-text">Самые<br> дешевые</span></span>
+                    <span class="collection__price">от <span class="collection__price-text">23 руб.</span></span>
+                  </span>
+                </a>
+              </div>
+              
+              <div class="grid__col grid__col--4">
+                <a class="collection collection_big" href="#">
+                  <div class="collection__image">
+                    <img src="images/catalog/collection4.png" alt="@@">
+                  </div>
+                  <span class="collection__content">
+                    <span class="collection__count">22 игры</span>
+                    <span class="collection__title"><span class="collection__title-text">Лидеры продаж<br> Gabestore</span></span>
+                    <span class="collection__price">от <span class="collection__price-text">23 руб.</span></span>
+                  </span>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+
+        <section class="catalog-list">
+         
+          <form id="w0" class="catalog-form js-catalog-form" action="/search/filter" method="post">
+            <div class="catalog-sorting sorting wrapper js-sorting">
+              
+              <div class="catalog-mob-sorting">            
+                <div class="catalog-mob-button catalog-mob-button_filters">Фильтры<span class="catalog-mob-buttoncount">12</span></div>
+                <div class="catalog-mob-button catalog-mob-button_reset">Сбросить</div>
+              </div>
+
+              <div class="sorting__ui">
+                <p class="sorting__ui-txt">
+                  Сортировать по:
+                </p>
+                <div class="sort-btn  js-sorting_btn ">
+                  <input type="radio" id="productfilter-sortname" name="ProductFilter[sortName]" value="views">
+                  <span class="link link--black link--dotted">популярности</span>
+                  <span class="iconic iconic--sorting"></span>
+                </div>
+                <div class="sort-btn  js-sorting_btn ">
+                  <input type="radio" id="productfilter-sortname" name="ProductFilter[sortName]" value="title">
+                  <span class="link link--black link--dotted">алфавиту</span>
+                  <span class="iconic iconic--sorting"></span>
+                </div>
+                <div class="sort-btn _active js-sorting_btn ">
+                  <input type="radio" id="productfilter-sortname" name="ProductFilter[sortName]" value="price" checked="">
+                  <span class="link link--black link--dotted">цене</span>
+                  <span class="iconic iconic--sorting"></span>
+                </div>
+                <div class="sort-btn  js-sorting_btn ">
+                  <input type="radio" id="productfilter-sortname" name="ProductFilter[sortName]" value="discount">
+                  <span class="link link--black link--dotted">величине скидки</span>
+                  <span class="iconic iconic--sorting"></span>
+                </div>
+                <div class="sort-btn  js-sorting_btn ">
+                  <input type="radio" id="productfilter-sortname" name="ProductFilter[sortName]" value="date"><span class="link link--black link--dotted">дате</span>
+                  <span class="iconic iconic--sorting"></span>
+                </div>
+                <div class="sort-btn  js-sorting_btn ">
+                  <input type="radio" id="productfilter-sortname" name="ProductFilter[sortName]" value="rating"><span class="link link--black link--dotted">по рейтингу</span>
+                  <span class="iconic iconic--sorting"></span>
+                </div>
+                <input type="hidden" id="productfilter-sorttype" class="js-sorting_way-input" name="ProductFilter[sortType]" value="asc">
+              </div>
+              
+              <div class="sorting__filter">
+                <span class="link link--black link--dotted">с фильтрами</span>
+                <a href="#" class="sorting__switcher is-active" data-filter="yes" data-text="с фильтрами">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="4" height="4" fill="black"/>
+                    <rect width="4" height="4" transform="translate(6)" fill="black"/>
+                    <rect width="4" height="16" transform="translate(12)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(0 6)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(6 6)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(0 12)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(6 12)" fill="black"/>
+                  </svg>
+                </a>
+                <a href="#" class="sorting__switcher" data-filter="no" data-text="без фильтров">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="4" height="4" fill="black"/>
+                    <rect width="4" height="4" transform="translate(6)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(12)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(0 6)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(6 6)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(12 6)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(0 12)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(6 12)" fill="black"/>
+                    <rect width="4" height="4" transform="translate(12 12)" fill="black"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+          </form>
+          
+          <div class="wrapper catalog-list-wrapper">
+            <div class="catalog-main">
+            
+              <div class="catalog-cards">
+              
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__notavailable">Нет в наличии</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-notavailable">Нет в наличии</span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="2250">2250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__notavailable">Нет в наличии</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-notavailable">Нет в наличии</span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price catalog-card__price_full">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price catalog-card__price_full">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+                <div class="catalog-col">
+                  <a href="#" class="catalog-card">
+                    <span class="catalog-card__inner">
+                      <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                      <span class="catalog-card__bottom">
+                        <span class="catalog-card__price">
+                          <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                        <span class="catalog-card__discount">-50%</span>
+                      </span>
+                      <span class="catalog-card__hover">
+                        <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                          <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                        </span>
+                      </span>
+                    </span>
+                    <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                  </a>
+                </div>
+                
+              </div>
+              
+              <a href="#" class="btn btn--long catalog-showmore">
+                Показать еще
+              </a>
+              
+            </div>
+            
+            <div class="catalog-filter-wrapper">
+            <form class="catalog-filter">
+              <div class="catalog-filter__head">
+                <p class="catalog-filter__heading">Фильтры</p>
+                <span class="catalog-filter__close"></span>
+              </div>
+              
+              <span class="catalog-filter__found"><span class="catalog-filter__foundtext">Найдено 26 игр</span></span>
+             
+              <div class="catalog-filter__block is-active">
+                <p class="catalog-filter__title">Цена<span class="catalog-filter__count">3</span><span class="catalog-filter__arrow"></span></p>
+                <div class="catalog-filter__body">
+                  <div class="catalog-filter__row">
+                    <div class="catalog-filter__field">
+                      <span class="catalog-filter__field-title">от</span>
+                      <input type="text" class="catalog-filter__input" value="200 р." data-range-min>
+                    </div>
+                    <span class="catalog-filter__field-separator"></span>
+                    <div class="catalog-filter__field">
+                      <span class="catalog-filter__field-title">до</span>
+                      <input type="text" class="catalog-filter__input" value="2000 р." data-range-max>
+                    </div>
+                  </div>
+                  <div class="catalog-filter__range js-filter-range" data-min="200" data-max="4000" data-unit=' р.'></div>
+                  <div class="catalog-filter__checkitem">
+                    <label class="catalog-filter__label">
+                      <input type="checkbox" name='instock' value="yes">
+                      <span class="catalog-filter__checkbox"></span>
+                      <span class="catalog-filter__checktext">Только в наличии</span>
+                    </label>
+                  </div>
+                </div>                
+              </div>
+              
+              <div class="catalog-filter__block is-active">
+                <p class="catalog-filter__title">Жанры<span class="catalog-filter__count">3</span><span class="catalog-filter__arrow"></span></p>
+                <div class="catalog-filter__body">
+                  <div class="catalog-filter__checklist">
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='genre' value="action">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Экшн</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='genre' value="adventure">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Приключения</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='genre' value="rpg">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">RPG</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='genre' value="simulator">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Симуляторы</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='genre' value="racing">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Гонки</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="catalog-filter__block is-active">
+                <p class="catalog-filter__title">Дата выхода<span class="catalog-filter__count">3</span><span class="catalog-filter__arrow"></span></p>
+                <div class="catalog-filter__body">
+                  <div class="catalog-filter__row">
+                    <div class="catalog-filter__field">
+                      <span class="catalog-filter__field-title">от</span>
+                      <input type="text" class="catalog-filter__input" value="2009 г." data-range-min>
+                    </div>
+                    <span class="catalog-filter__field-separator"></span>
+                    <div class="catalog-filter__field">
+                      <span class="catalog-filter__field-title">до</span>
+                      <input type="text" class="catalog-filter__input" value="2018 г." data-range-max>
+                    </div>
+                  </div>
+                  <div class="catalog-filter__range js-filter-range" data-min="2000" data-max="2018" data-unit=' г.'></div>
+                </div>
+              </div>
+              
+              <div class="catalog-filter__block is-active">
+                <p class="catalog-filter__title">Метки<span class="catalog-filter__count">2</span><span class="catalog-filter__arrow"></span></p>
+                <div class="catalog-filter__body">
+                  <div class="catalog-filter__inputbox">
+                    <input type="text" class="catalog-filter__input" placeholder="Введите название">
+                    <span class="catalog-filter__inputclear"></span>
+                  </div>
+                  <div class="catalog-filter__checklist">
+                    <div class="catalog-filter__checkwrapper scrollbar-inner">
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='mark' value="2d">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">2D</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='mark' value="3dvision">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">3D Vision</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='mark' value="4k">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">4K</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='mark' value="2d">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">2D</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='mark' value="3dvision">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">3D Vision</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='mark' value="4k">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">4K</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='mark' value="80">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">80-е</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='mark' value="90">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">90-e</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='mark' value="new">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">Новые</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='mark' value="best">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">Лучшие</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="catalog-filter__block">
+                <p class="catalog-filter__title">Язык<span class="catalog-filter__count">2</span><span class="catalog-filter__arrow"></span></p>
+                <div class="catalog-filter__body">
+                  <div class="catalog-filter__checklist">
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='language' value="language1">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Язык 1</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='language' value="language2">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Язык 2</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='language' value="language3">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Язык 3</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="catalog-filter__block">
+                <p class="catalog-filter__title">Издатель<span class="catalog-filter__count">3</span><span class="catalog-filter__arrow"></span></p>
+                <div class="catalog-filter__body">
+                  <div class="catalog-filter__checklist">
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='publisher' value="publisher1">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Издатель 1</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='publisher' value="publisher2">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Издатель 2</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='publisher' value="publisher3">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Издатель 3</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="catalog-filter__block">
+                <p class="catalog-filter__title">Разработчик<span class="catalog-filter__count">3</span><span class="catalog-filter__arrow"></span></p>
+                <div class="catalog-filter__body">
+                  <div class="catalog-filter__inputbox">
+                    <input type="text" class="catalog-filter__input" placeholder="Введите название">
+                    <span class="catalog-filter__inputclear"></span>
+                  </div>
+                  <div class="catalog-filter__checklist">
+                    <div class="catalog-filter__checkwrapper scrollbar-inner">
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='developer' value="ubisoft">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">Ubisoft</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='developer' value="dice">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">Dice</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='developer' value="cdprojektred">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">CD Projekt Red</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='developer' value="ubisoft">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">Ubisoft</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='developer' value="dice">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">Dice</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='developer' value="cdprojektred">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">CD Projekt Red</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='developer' value="treyarch">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">Treyarch</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='developer' value="rockstar">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">Rockstar</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='developer' value="electronicarts">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">Electronic Arts</span>
+                        </label>
+                      </div>
+                      <div class="catalog-filter__checkitem">
+                        <label class="catalog-filter__label">
+                          <input type="checkbox" name='developer' value="thq">
+                          <span class="catalog-filter__checkbox"></span>
+                          <span class="catalog-filter__checktext">THQ</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="catalog-filter__block">
+                <p class="catalog-filter__title">Хар-ки<span class="catalog-filter__count">12</span><span class="catalog-filter__arrow"></span></p>
+                <div class="catalog-filter__body">
+                  <div class="catalog-filter__checklist">
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='characteristic' value="characteristic1">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Характеристика 1</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='characteristic' value="characteristic2">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Характеристика 2</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='characteristic' value="characteristic3">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Характеристика 3</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="catalog-filter__block">
+                <p class="catalog-filter__title">Активация<span class="catalog-filter__count">3</span><span class="catalog-filter__arrow"></span></p>
+                <div class="catalog-filter__body">
+                  <div class="catalog-filter__checklist">
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='activation' value="activation1">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Активация 1</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='activation' value="activation2">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Активация 2</span>
+                      </label>
+                    </div>
+                    <div class="catalog-filter__checkitem">
+                      <label class="catalog-filter__label">
+                        <input type="checkbox" name='activation' value="activation3">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span class="catalog-filter__checktext">Активация 3</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="catalog-filter__clear">
+                <span class="link link--black link--dotted catalog-filter__reset">очистить фильтры</span>
+                <span class="catalog-filter__clearcount">32</span>
+              </div>
+              
+              <a href='#' class="catalog-filter__accept">
+                <span class="link link--black link--dotted catalog-filter__acceptlink">показать <span>327</span> игр</span>
+              </a>
+              
+            </form>
+            </div>         
+            
+          </div>
+          
+          <div class="catalog-add">
+            <div class="wrapper">
+              <h2 class="page-title">Ничего не нашел?</h2>
+              <div class="grid">
+                <div class="grid__col grid__col--12 grid__col--sm_6 grid__col--lg_5">
+                  <a class="recommendation recommendation--small recommendation--lilac" href="recommendation-inner.html">
+                    <div class="recommendation__content">
+                      <div class="recommendation__count">
+                        22 <small>игры</small>
+                      </div>
+                      <div class="recommendation__title">
+                        <span class="recommendation__title-text">Масштабные войны</span>
+                      </div>
+                      <div class="recommendation__price">
+                        от <b>23 руб.</b>
+                      </div>
+                    </div>
+                    <div class="recommendation__arrow">
+                      <img class="recommendation__arrow-icon" src="images/svg/arrow-forward.svg" alt="@@">
+                    </div>
+                    <img src="images/war.png" alt="@@" class="recommendation__image">
+                  </a>
+                </div>
+                <div class="grid__col grid__col--12 grid__col--sm_6 grid__col--lg_7">
+                  <a class="recommendation recommendation--middle recommendation--yellow-orange" href="recommendation-inner.html">
+                    <div class="recommendation__content">
+                      <div class="recommendation__count">
+                        12 <small>игр</small>
+                      </div>
+                      <div class="recommendation__title">
+                        <span class="recommendation__title-text">Мощный сюжет</span>
+                      </div>
+                      <div class="recommendation__price">
+                        от <b>23 руб.</b>
+                      </div>
+                    </div>
+                    <div class="recommendation__arrow">
+                      <img class="recommendation__arrow-icon" src="images/svg/arrow-forward.svg" alt="@@">
+                    </div>
+                    <img src="images/svg/strong_narrative.svg" alt="@@" class="recommendation__image">
+                  </a>
+                </div>
+                <div class="grid__col grid__col--12 grid__col--lg_4">
+                  <a class="recommendation recommendation--vert recommendation--violet" href="recommendation-inner.html">
+                    <div class="recommendation__content">
+                      <div class="recommendation__count">
+                        12 <small>игр</small>
+                      </div>
+                      <div class="recommendation__title">
+                        <span class="recommendation__title-text">Для игры с&nbsp;друзьями</span>
+                      </div>
+                      <div class="recommendation__price">
+                        от <b>23 руб.</b>
+                      </div>
+                    </div>
+                    <div class="recommendation__arrow">
+                      <img class="recommendation__arrow-icon" src="images/svg/arrow-forward.svg" alt="@@">
+                    </div>
+                    <img src="images/cooperative.png" alt="@@" class="recommendation__image">
+                  </a>
+                </div>
+                <div class="grid__col grid__col--12 grid__col--lg_8">
+                  <div class="grid grid--inner">
+                    <div class="grid__col grid__col--12">
+                      <a class="recommendation recommendation--big recommendation--green recommendation--longimg" href="recommendation-inner.html">
+                        <div class="recommendation__content">
+                          <div class="recommendation__count">
+                            12 <small>игр</small>
+                          </div>
+                          <div class="recommendation__title">
+                            <span class="recommendation__title-text">Про Вторую Мировую войну</span>
+                          </div>
+                          <div class="recommendation__price">
+                            от <b>23 руб.</b>
+                          </div>
+                        </div>
+                        <div class="recommendation__arrow">
+                          <img class="recommendation__arrow-icon" src="images/svg/arrow-forward.svg" alt="@@">
+                        </div>
+                        <img src="images/svg/world_war_2.svg" alt="@@" class="recommendation__image">
+                      </a>
+                    </div>
+                    <div class="grid__col grid__col--12 grid__col--sm_6">
+                      <a class="recommendation recommendation--blood recommendation--smalltitle" href="recommendation-inner.html">
+                        <div class="recommendation__content">
+                          <div class="recommendation__count">
+                            12 <small>игр</small>
+                          </div>
+                          <div class="recommendation__title">
+                            <span class="recommendation__title-text">Самые хардкорные игры</span>
+                          </div>
+                          <div class="recommendation__price">
+                            от <b>23 руб.</b>
+                          </div>
+                        </div>
+                        <div class="recommendation__arrow">
+                          <img class="recommendation__arrow-icon" src="images/svg/arrow-forward.svg" alt="@@">
+                        </div>
+                        <img src="images/svg/hardcore.svg" alt="@@" class="recommendation__image">
+                      </a>
+                    </div>
+                    <div class="grid__col grid__col--12 grid__col--sm_6">
+                      <a class="recommendation recommendation--dark recommendation--blue recommendation--smalltitle" href="recommendation-inner.html">
+                        <div class="recommendation__content">
+                          <div class="recommendation__count">
+                            12 <small>игр</small>
+                          </div>
+                          <div class="recommendation__title">
+                            <span class="recommendation__title-text">Игры, которые вы захотите перепройти</span>
+                          </div>
+                          <div class="recommendation__price">
+                            от <b>23 руб.</b>
+                          </div>
+                        </div>
+                        <div class="recommendation__arrow">
+                          <img class="recommendation__arrow-icon" src="images/svg/arrow-forward.svg" alt="@@">
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+
+      </div>
+
+      <section class="online-sells">
+        <div class="wrapper">
+          <div class="h4">
+            Покупают прямо сейчас
+          </div>
+        </div>
+
+        <div class="online-sells__track-wr">
+          <div class="online-sells__loadout-cont js-sells-loadout">
+          </div>
+          <div class="online-sells__track js-sells-tracker" data-url="/queries/onlineSellsItem.php">
+            <a href="https://gabestore.ru/game/dishonored" class="game-label" style="background-image: url('product/176x82_h24sOtXI2nakdIrVHiAmB5crM7HbTdbL.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/metro-redux-bundle" class="game-label" style="background-image: url('product/176x82_sA-xe872Pxi4wgFq8Il19Fses9Wuh0iQ.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/rage" class="game-label" style="background-image: url('product/176x82_YjXvcDvhzEb0mvpPyAcoqsmUIOMcu9kA.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/fallout-4" class="game-label" style="background-image: url('product/176x82_KhK-ld9Gnfl33BMM5xFIk7LEyR0KWj2s.png');">
+            </a>
+            <a href="https://gabestore.ru/game/metro-last-light-redux" class="game-label" style="background-image: url('product/176x82_HPxgVU-TlI1mEnguniVmlaPAwo_A-xad.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/mortal-kombat-xl" class="game-label" style="background-image: url('product/176x82_1YhiIiwlnC4TNgmjR4T_rmRrQa5L51YL.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/dark-souls-prepare-to-die-edition" class="game-label" style="background-image: url('product/176x82_cZhueDDbH73X_Fuh9NB6ySZE1D-49Ucp.png');">
+            </a>
+            <a href="https://gabestore.ru/game/hitman-absolution" class="game-label" style="background-image: url('product/176x82_yE4vawf3_QeBtsh5iNr-ABvlcskrDf1j.png');">
+            </a>
+            <a href="https://gabestore.ru/game/two-worlds-epic-edition" class="game-label" style="background-image: url('product/176x82_TEkz2SE1Xfaj-0X_naV0TK52ZIWyIOcC.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/rage" class="game-label" style="background-image: url('product/176x82_YjXvcDvhzEb0mvpPyAcoqsmUIOMcu9kA.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/rage" class="game-label" style="background-image: url('product/176x82_YjXvcDvhzEb0mvpPyAcoqsmUIOMcu9kA.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/naruto-shippuden-ultimate-ninja-storm-4" class="game-label" style="background-image: url('product/176x82_p2j_ebxYZc0YqL09k1u0Z-llnnZV28jU.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/tom-clancys-the-division" class="game-label" style="background-image: url('product/176x82_uwR4vZnEJ8mG0NXmyMNZVnYJSxJ8ubsu.png');">
+            </a>
+            <a href="https://gabestore.ru/game/dark-souls-prepare-to-die-edition" class="game-label" style="background-image: url('product/176x82_cZhueDDbH73X_Fuh9NB6ySZE1D-49Ucp.png');">
+            </a>
+            <a href="https://gabestore.ru/game/rage" class="game-label" style="background-image: url('product/176x82_YjXvcDvhzEb0mvpPyAcoqsmUIOMcu9kA.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/star-wars-battlefront-ii" class="game-label" style="background-image: url('product/176x82_60-aIlSzdRmO9ly94C74smOjCdvmm2jV.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/conan-exiles" class="game-label" style="background-image: url('product/176x82_YzZ2-DilchIVmo8wn00XWBgPkdV8Eyuq.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/injustice-gods-among-us-ultimate-edition" class="game-label" style="background-image: url('product/176x82_P0IaF0gPNLgdTwpL_xiguM-jMr99KNyp.png');">
+            </a>
+            <a href="https://gabestore.ru/game/rage" class="game-label" style="background-image: url('product/176x82_YjXvcDvhzEb0mvpPyAcoqsmUIOMcu9kA.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/rage" class="game-label" style="background-image: url('product/176x82_YjXvcDvhzEb0mvpPyAcoqsmUIOMcu9kA.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/darksiders-ii-deathinitive-edition" class="game-label" style="background-image: url('product/176x82_UVA2__1PQ51Qtef8fLkBFLGrTSRvqdiu.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/playstation-plus-podpiska-na-90-dnej" class="game-label" style="background-image: url('product/176x82_2Cz0xXKeNqsuqNiF7w6yk_seYuS-RGcf.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/doom" class="game-label" style="background-image: url('product/176x82_VTMDJVY6v2bSLdAnei5UZYmfJ8_En3Vz.png');">
+            </a>
+            <a href="https://gabestore.ru/game/doom" class="game-label" style="background-image: url('product/176x82_VTMDJVY6v2bSLdAnei5UZYmfJ8_En3Vz.png');">
+            </a>
+            <a href="https://gabestore.ru/game/rage" class="game-label" style="background-image: url('product/176x82_YjXvcDvhzEb0mvpPyAcoqsmUIOMcu9kA.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/beholder" class="game-label" style="background-image: url('product/176x82_d_tyv1PoS2upiGFXdR773UxcUttSghkH.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/doom" class="game-label" style="background-image: url('product/176x82_VTMDJVY6v2bSLdAnei5UZYmfJ8_En3Vz.png');">
+            </a>
+            <a href="https://gabestore.ru/game/two-worlds-epic-edition" class="game-label" style="background-image: url('product/176x82_TEkz2SE1Xfaj-0X_naV0TK52ZIWyIOcC.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/rage" class="game-label" style="background-image: url('product/176x82_YjXvcDvhzEb0mvpPyAcoqsmUIOMcu9kA.jpg');">
+            </a>
+            <a href="https://gabestore.ru/game/dark-souls-2-scholar-of-the-first-sin" class="game-label" style="background-image: url('product/176x82_7g8sXg7yVzJXY1LL6ruI9fxdSNVCqa-T.png');">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__main">
+          <div class="wrapper">
+
+            <nav class="footer__nav">
+              <ul>
+                <li>
+                  <a href="https://gabestore.ru/catalog" class="footer__nav-link">
+                    Каталог игр
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gabestore.ru/rand" class="footer__nav-link">
+                    Испытай удачу
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gabestore.ru/top" class="footer__nav-link">
+                    Топ продаж
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gabestore.ru/newgames" class="footer__nav-link">
+                    Новинки
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gabestore.ru/preorder" class="footer__nav-link">
+                    Предзаказы
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gabestore.ru/sale" class="footer__nav-link">
+                    Скидки
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gabestore.ru/economy" class="footer__nav-link">
+                    Экономия
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="footer__info">
+
+              <div class="footer__info-commerc">
+                <p class="footer__legal">
+                  Все продаваемые ключи закупаются у официальных дистрибьюторов и издателей. В том числе у 1C-СофтКлаб, Бука, Новый Диск и Enaza.
+                </p>
+                <div class="footer__pay-syst">
+                  <img src="images/pay-systems.png" alt="">
+                </div>
+              </div>
+
+              <div class="footer__info-soc">
+                <div class="footer__yt-wr">
+                  <a target="_blank" href="https://www.youtube.com/user/onlinegamercentral" class="footer__youtube">
+                    <span>
+                      Смотрите обзор игр
+                      на Youtube-канале
+                    </span>
+                  </a>
+                </div>
+
+                <div class="social-links social-links--grey">
+                  <a target="_blank" href="https://vk.com/gabestore" class="fa fa-vk"></a>
+                  <a target="_blank" href="https://twitter.com/gabestoreru" class="fa fa-twitter"></a>
+                  <a target="_blank" href="http://t.me/gabestore" class="fa fa-telegram"></a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="wrapper">
+            <p class="footer__cr">
+              GABESTORE.RU © 2014-2018
+            </p>
+
+            <p class="footer__dev">
+              Разработка сайта — <a target="_blank" href="http://nikoland.ru/">NIKOLAND</a>
+            </p>
+
+          </div>
+        </div>
+
+        <script type="text/javascript">
+        <!--
+        document.write("<a href='//www.liveinternet.ru/click' " +
+        "target=_blank><img src='https://counter.yadro.ru/hit?t26.5;r" +
+        escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
+        ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+          screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+          ";" + Math.random() +
+          "' alt='' title='LiveInternet: показано число посетителей за" +
+          " сегодня' " +
+          "border='0' width='1' height='1'><\/a>")
+          //-->
+          </script>
+
+          <script type="application/ld+json">
+          {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "url": "https://gabestore.ru",
+            "logo": "https://gabestore.ru/images/logo.png"
+          }
+          </script>
+        </footer>
+      </div>
+      <!-- /page-inner -->
+      
+      <div class="up-button"></div>
+
+      <!-- popups -->
+
+      <div class="pswp js-pswp" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+          <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+          </div>
+
+          <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+              <div class="pswp__counter"></div>
+              <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+              <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+              <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+              <div class="pswp__preloader">
+                <div class="pswp__preloader__icn">
+                  <div class="pswp__preloader__cut">
+                    <div class="pswp__preloader__donut"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+              <div class="pswp__caption__center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /page -->
+    <script src="assets/d8666640/jquery.js"></script>
+    <script src="assets/cd488b53/yii.js"></script>
+    <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script src="https://yastatic.net/share2/share.js"></script>
+    <script src="scripts/lib.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/currency.js"></script>
+    <script src="scripts/jquery.scrollbar.min.js"></script>
+    <script src="scripts/catalog.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function(d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter37994395 = new Ya.Metrika({
+            id: 37994395,
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+          });
+        } catch (e) {}
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+      s = d.createElement("script"),
+      f = function() {
+        n.parentNode.insertBefore(s, n);
+      };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/37994395" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107301200-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments)
+    };
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107301200-1');
+    </script>
+  </body>
+
+</html>
