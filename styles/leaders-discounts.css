@@ -1,0 +1,251 @@
+.page-header--bordered {
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.page-header__content--smpad {
+  padding: 20px 0 28px;
+}
+
+.breadcrumb--big {
+  font-size: 14px;
+}
+
+.breadcrumb--big .breadcrumbs__li {
+  margin-right: 5px;
+}
+
+.page-header__content .page-title--small {
+  margin-top: 10px;
+}
+
+.page-title--small {
+  width: 100%;
+  color: #000;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.section-heading__col {
+  flex: 1;
+}
+
+.section-heading__col--right {
+  text-align: right;
+  max-width: 75px;
+}
+
+@media screen and (min-width: 861px) {
+  .section-heading__col--right {
+    max-width: 300px;
+  }
+}
+
+.leaders .catalog-cards {
+  margin-top: -20px;
+  padding-top: 0;
+}
+
+.catalog-card {
+  overflow: visible;
+}
+
+.catalog-card__inner {
+  overflow: hidden;
+}
+
+.catalog-card__badge {
+  position: absolute;
+  display: block;
+  top: 15px;
+  right: -5px;
+  height: 20px;
+  min-width: 23px;
+  max-width: 90%;
+  z-index: 5;
+}
+
+.catalog-card__badge::before {
+  position: absolute;
+  display: block;
+  top: -5px;
+  right: 0;
+  content: '';
+  border: 2.5px solid #d0a30e;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.catalog-card__badge-text {
+  display: inline-block;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 12px;
+  background-color: #ffc608;
+  opacity: 1;
+  transition: all .3s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.catalog-card__badge-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.catalog-card__badge-icon img {
+  width: 11px;
+  height: 12px;
+}
+
+@media screen and (min-width: 1021px) {
+  .catalog-card__badge-text {
+    opacity: 0;
+  }
+
+  .catalog-card__badge-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;
+    height: 20px;
+    background-color: #ffc608;
+    opacity: 1;
+  }
+
+  .catalog-card:hover .catalog-card__badge-text {
+    opacity: 1;
+  }
+
+  .catalog-card:hover .catalog-card__badge-icon {
+    opacity: 0;
+  }
+}
+
+.sorting-panel {
+  width: 100%;
+}
+
+.sorting-panel__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+.sorting-panel__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.sorting-panel__group--left {
+  position: relative;
+  padding-bottom: 13px;
+}
+
+.sorting-panel__group--left::before {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.04);
+  transform: translateX(-50%);
+}
+
+.sorting-panel__group--right {
+  padding-top: 16px;
+}
+
+.sorting-panel__btn-text {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 3px 7px;
+  border-radius: 3px;
+  transition: background .3s ease;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.sorting-panel__btn-text .link {
+  transition: all .3s ease;
+}
+
+.sorting-panel__btn input:checked ~ .sorting-panel__btn-text {
+  background: #f2f2f2;
+}
+
+.sorting-panel__btn input:checked ~ .sorting-panel__btn-text .link {
+  border-bottom-color: transparent;
+}
+
+@media screen and (max-width: 630px) {
+  .sorting-panel__btn {
+    text-align: center;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 631px) {
+  .sorting-panel__btn:not(:last-child) {
+    display: inline-block;
+    margin-right: 25px;
+  }
+}
+
+@media screen and (min-width: 1021px) {
+  .sorting-panel__group {
+    width: 50%;
+  }
+
+  .sorting-panel__group--left {
+    justify-content: flex-start;
+    text-align: left;
+    padding-bottom: 0;
+  }
+
+  .sorting-panel__group--left::before {
+    display: none;
+  }
+
+  .sorting-panel__group--right {
+    padding-top: 0;
+    justify-content: flex-end;
+    text-align: right;
+  }
+}
