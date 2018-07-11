@@ -26,6 +26,7 @@
   <script src="a0ba4cf766.js"></script>
 
   <link href='styles/lib.css' rel='stylesheet' type='text/css'>
+  <link href='styles/swiper.min.css' rel='stylesheet' type='text/css'>
   <link href='styles/app.css' rel='stylesheet' type='text/css'>
   <link href='styles/recommendation.css' rel='stylesheet'>
   <link href='styles/catalog.css' rel='stylesheet'>
@@ -401,7 +402,7 @@
             </div>
           </div>
         </section>
-        <section class="leaders">
+        <section class="page-section leaders">
           <div class="leaders__filter">
             <form id="w0" class="sorting-panel" action="/" method="post">
               <div class="wrapper">
@@ -434,7 +435,7 @@
                   </div>
                   <div class="sorting-panel__group sorting-panel__group--right">
                     <label class="sorting-panel__btn">
-                      <input type="radio"  name="sortTime" value="day">
+                      <input type="radio"  name="sortTime" value="day" checked>
                       <span class="sorting-panel__btn-text">
                         <span class="link link--black link--dotted">за сутки</span>
                       </span>
@@ -446,7 +447,7 @@
                       </span>
                     </label>
                     <label class="sorting-panel__btn">
-                      <input type="radio"  name="sortTime" value="month" checked="">
+                      <input type="radio"  name="sortTime" value="month">
                       <span class="sorting-panel__btn-text">
                         <span class="link link--black link--dotted">за месяц</span>
                       </span>
@@ -774,7 +775,7 @@
             </div>
           </div>
         </section>
-        <section class="bestsellers">
+        <section class="page-section bestsellers js-carousel">
           <div class="wrapper">
             <div class="section-heading">
               <div class="section-heading__col section-heading__col--left">
@@ -782,10 +783,273 @@
               </div>
               <div class="section-heading__col section-heading__col--right">
                 <span class="slider-counter">
-                  <span class="slider-counter__current">1</span>
-                  <span class="slider-counter__total">/23</span>
+                  <span class="slider-counter__current">1</span> / <span class="slider-counter__total">23</span>
                 </span>
               </div>
+            </div>
+            <div class="carousel">
+              <div class="carousel__buttons">
+                <button class="carousel__button carousel__button--prev" type="button">
+                  <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="carousel__button-icon">
+                    <path d="M8 6.5L0 0V6.5V13L8 6.5Z">
+                  </svg>
+                </button>
+                <button class="carousel__button carousel__button--next" type="button">
+                  <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="carousel__button-icon">
+                    <path d="M8 6.5L0 0V6.5V13L8 6.5Z">
+                  </svg>
+                </button>
+              </div>
+              <div class="carousel__container">
+                <div class="carousel__wrapper swiper-wrapper">
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          RPG
+                        </div>
+                        <a href="#" class="catalog-card catalog-card--big">
+                          <span class="catalog-card__inner">
+                            <img src="images/fallout4.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Fallout 4</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          Экшен
+                        </div>
+                        <a href="#" class="catalog-card catalog-card--big">
+                          <span class="catalog-card__inner">
+                            <img src="images/mortalkombat.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Mortal Kombat XL</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          Онлайн-игра
+                        </div>
+                        <a href="#" class="catalog-card catalog-card--big">
+                          <span class="catalog-card__inner">
+                            <img src="images/gta.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Grand Theft Auto 5</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          Кооператив
+                        </div>
+                        <a href="#" class="catalog-card catalog-card--big">
+                          <span class="catalog-card__inner">
+                            <img src="images/metro.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Metro 2033 Redux</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          RPG
+                        </div>
+                        <a href="#" class="catalog-card catalog-card--big">
+                          <span class="catalog-card__inner">
+                            <img src="images/fallout4.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Fallout 4</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          Экшен
+                        </div>
+                        <a href="#" class="catalog-card catalog-card--big">
+                          <span class="catalog-card__inner">
+                            <img src="images/mortalkombat.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Mortal Kombat XL</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          Онлайн-игра
+                        </div>
+                        <a href="#" class="catalog-card catalog-card--big">
+                          <span class="catalog-card__inner">
+                            <img src="images/gta.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Grand Theft Auto 5</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          Кооператив
+                        </div>
+                        <a href="#" class="catalog-card catalog-card--big">
+                          <span class="catalog-card__inner">
+                            <img src="images/metro.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Metro 2033 Redux</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          Онлайн-игра
+                        </div>
+                        <a href="#" class="catalog-card catalog-card--big">
+                          <span class="catalog-card__inner">
+                            <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price catalog-card__price_full">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          Кооператив
+                        </div>
+                        <a href="#" class="catalog-card catalog-card--big">
+                          <span class="catalog-card__badge">
+                            <span class="catalog-card__badge-icon">
+                              <img src="images/svg/collection.svg" alt="Сборники" width="11" height="12">
+                            </span>
+                            <span class="catalog-card__badge-text">Сборники</span>
+                          </span>
+                          <span class="catalog-card__inner">
+                            <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__notavailable">Нет в наличии</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-notavailable">Нет в наличии</span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="bestsellers__note desktop-hide">
+              <div class="page-section__text">Еще 1020 товаров в каталоге магазина</div>
+              <a href="#" class="btn btn--long btn--noborder">
+                Перейти в каталог
+              </a>
             </div>
           </div>
         </section>
@@ -1029,6 +1293,9 @@
     <script src="scripts/lib.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/currency.js"></script>
+    <!-- Swiper slider https://idangero.us/swiper/ -->
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/sliders.js"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
     (function(d, w, c) {
