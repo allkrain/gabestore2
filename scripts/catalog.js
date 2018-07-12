@@ -192,4 +192,11 @@ $(document).ready(function(){
   }
 
   checkpagewidth();
+
+  $(document).on('click', '.up-button', function(){
+    $('body, html').stop().animate({
+      scrollTop: 0,
+    }, 1000, 'swing');
+  });
+
 });
