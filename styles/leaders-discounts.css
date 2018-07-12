@@ -2,6 +2,16 @@
   border-width: 0;
 }
 
+@media screen and (max-width: 860px) {
+  .grid--lg10vert {
+    margin-top: -10px;
+  }
+
+  .grid--lg10vert .grid__col {
+    padding-top: 10px;
+  }
+}
+
 @media screen and (min-width: 481px) {
   .grid--sm10 {
     margin-top: -10px;
@@ -94,6 +104,17 @@
 .section-heading__col--right {
   text-align: right;
   max-width: 75px;
+}
+
+.section-heading__text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #787878;
+}
+
+.section-heading__text i {
+  color: #000;
+  font-style: normal;
 }
 
 @media screen and (min-width: 861px) {
@@ -685,8 +706,12 @@
   transform: scale(1.1);
 }
 
-.gameset--image .gameset__image {
+.gameset--selection .gameset__image {
   max-height: 200%;
+}
+
+.gameset--selection {
+  padding: 34px 35px 33px;
 }
 
 .gameset__logo {
@@ -731,6 +756,10 @@
   max-width: 230px;
 }
 
+.gameset--selection .gameset__title {
+  margin-bottom: 5px;
+}
+
 @media screen and (min-width: 631px) {
 
   .gameset__title {
@@ -745,6 +774,18 @@
 
 .price-reduction {
   margin-bottom: 52px;
+}
+
+@media screen and (max-width: 860px) {
+  .gameset--selection .gameset__image {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 861px) {
+  .gameset--selection {
+    padding: 30px 40px 29%;
+  }
 }
 
 @media screen and (min-width: 1021px) {
@@ -767,7 +808,12 @@
 }
 
 .discount-groups__more {
+  margin-top: 28px;
   margin-bottom: 0;
+}
+
+.discount-groups {
+  margin-bottom: 46px;
 }
 
 @media screen and (min-width: 1169px) {
@@ -831,4 +877,20 @@
 
 .discountset__describe b {
   font-weight: 700;
+}
+
+.selected-discounts {
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 1021px) {
+  .selected-discounts {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .mobile-hide {
+    display: none;
+  }
 }

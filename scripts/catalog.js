@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  
+
   $('.js-filter-range').each(function () {
     var min = parseInt($(this).attr('data-min'));
     var max = parseInt($(this).attr('data-max'));
@@ -26,7 +26,7 @@ $(document).ready(function(){
   $(document).on('click', '.catalog-filter__title', function () {
     var filterBlock = $(this).parents('.catalog-filter__block');
     var filterBody = $(this).next('.catalog-filter__body');
-    filterBlock.toggleClass('is-active');  
+    filterBlock.toggleClass('is-active');
     if (filterBlock.hasClass('is-active')) {
       filterBody.each(function () {
         var scrollHeight = this.scrollHeight;
@@ -67,7 +67,7 @@ $(document).ready(function(){
   });
 
   $(document).on('change', '.catalog-filter input', function (){
-    
+
     if ($(this).parents('.catalog-filter').attr('data-reset')) {
       $('.catalog-filter__found').removeClass('is-active');
     } else {
@@ -78,7 +78,7 @@ $(document).ready(function(){
       setTimeout(function(){
         $('.catalog-filter__found').removeClass('is-active');
       }, 3000);
-    }    
+    }
 
     var checkedLength = $(this).parents('.catalog-filter__block').find('input:checked').length;
     var count = $(this).parents('.catalog-filter__block').find('.catalog-filter__count');
@@ -167,14 +167,14 @@ $(document).ready(function(){
     } else {
       desktop = false;
     }
-    
+
     $(window).resize(function(){
-      if ($(window).width() > 1020) { 
+      if ($(window).width() > 1020) {
         newdesktop = true;
       } else {
         newdesktop = false;
       }
-      
+
       if (newdesktop != desktop) {
         desktop = !desktop;
         if (newdesktop === false) { // с десктопа на мобилку
@@ -192,11 +192,4 @@ $(document).ready(function(){
   }
 
   checkpagewidth();
-
-  $(document).on('click', '.up-button', function(){
-    $('body, html').stop().animate({
-      scrollTop: 0,
-    }, 1000, 'swing');
-  });
-
 });

@@ -1,3 +1,87 @@
+$(document).on('click', '.up-button', function(){
+  $('body, html').stop().animate({
+    scrollTop: 0,
+  }, 1000, 'swing');
+});
+
+function HideAndShowDiscountGroups () {
+  var groups = $('.discount-groups');
+  $(groups).each(function (i, el) {
+    var wW = $(window).width();
+    var elements = $(el).find('.grid__col');
+    var btn = $(el).find('.js-discount-showmore');
+    $(elements).addClass('is-hide');
+    if (wW < 481) {
+      $(elements).each(function (ix, col) {
+        if (ix < 3) {
+          $(col).removeClass('is-hide');
+        }
+      });
+      $(btn).fadeIn();
+    } else if (wW >=481 && wW < 861) {
+      $(elements).each(function (ix, col) {
+        if (ix < 6) {
+          $(col).removeClass('is-hide');
+        }
+      });
+      $(btn).fadeIn();
+    } else if (wW >= 861 && wW < 1169) {
+      $(elements).each(function (ix, col) {
+        if (ix < 8) {
+          $(col).removeClass('is-hide');
+        }
+      });
+      $(btn).fadeIn();
+    } else {
+      $(elements).removeClass('is-hide');
+      $(btn).fadeOut();
+    }
+  });
+}
+
+HideAndShowDiscountGroups();
+
+$(window).on('resize', HideAndShowDiscountGroups);
+
+$(document).on('click', '.js-discount-showmore', function (evt) {
+  evt.preventDefault();
+  var self = this;
+  var group = $(self).closest('.discount-groups');
+  var hiddenElements = $(group).find('.grid__col.is-hide');
+  var wW = $(window).width();
+  if ($(hiddenElements).length > 0) {
+    if (wW < 861) {
+      $(hiddenElements).each(function (i, el) {
+        if (i < 3) {
+          $(el).fadeIn();
+          $(el).removeClass('is-hide');
+          $(el).css({ display: ''});
+        }
+      });
+
+      if ($(hiddenElements).length <= 4) {
+        $(self).fadeOut();
+      } else {
+        $(self).fadeIn();
+      }
+    } else {
+      $(hiddenElements).each(function (i, el) {
+        if (i < 4) {
+          $(el).fadeIn();
+          $(el).removeClass('is-hide');
+          $(el).css({ display: ''});
+        }
+      });
+
+      if ($(hiddenElements).length <= 5) {
+        $(self).fadeOut();
+      } else {
+        $(self).fadeIn();
+      }
+    }
+  }
+});
+
 var bestsellersSlider = new Swiper('.js-carousel .carousel__container', {
   speed: 500,
   slidesPerView: 4,
@@ -115,82 +199,4 @@ var priceReductionSlider = new Swiper('.js-carousel2 .carousel__container', {
       }
     },
   },
-});
-
-function HideAndShowDiscountGroups () {
-  var groups = $('.discount-groups');
-  $(groups).each(function (i, el) {
-    var wW = $(window).width();
-    var elements = $(el).find('.grid__col');
-    var btn = $(el).find('.js-discount-showmore');
-    $(elements).addClass('is-hide');
-    if (wW < 481) {
-      $(elements).each(function (ix, col) {
-        if (ix < 3) {
-          $(col).removeClass('is-hide');
-        }
-      });
-      $(btn).fadeIn();
-    } else if (wW >=481 && wW < 861) {
-      $(elements).each(function (ix, col) {
-        if (ix < 6) {
-          $(col).removeClass('is-hide');
-        }
-      });
-      $(btn).fadeIn();
-    } else if (wW >= 861 && wW < 1169) {
-      $(elements).each(function (ix, col) {
-        if (ix < 8) {
-          $(col).removeClass('is-hide');
-        }
-      });
-      $(btn).fadeIn();
-    } else {
-      $(elements).removeClass('is-hide');
-      $(btn).fadeOut();
-    }
-  });
-}
-
-HideAndShowDiscountGroups();
-
-$(window).on('resize', HideAndShowDiscountGroups);
-
-$(document).on('click', '.js-discount-showmore', function (evt) {
-  evt.preventDefault();
-  var self = this;
-  var group = $(self).closest('.discount-groups');
-  var hiddenElements = $(group).find('.grid__col.is-hide');
-  var wW = $(window).width();
-  if ($(hiddenElements).length > 0) {
-    if (wW < 861) {
-      $(hiddenElements).each(function (i, el) {
-        if (i < 3) {
-          $(el).fadeIn();
-          $(el).removeClass('is-hide');
-          $(el).css({ display: ''});
-        }
-      });
-
-      if ($(hiddenElements).length <= 4) {
-        $(self).fadeOut();
-      } else {
-        $(self).fadeIn();
-      }
-    } else {
-      $(hiddenElements).each(function (i, el) {
-        if (i < 4) {
-          $(el).fadeIn();
-          $(el).removeClass('is-hide');
-          $(el).css({ display: ''});
-        }
-      });
-
-      if ($(hiddenElements).length <= 5) {
-        $(self).fadeOut();
-      } else {
-        $(self).fadeIn();
-      }
-    }
-  }
 });
