@@ -26,6 +26,7 @@
   <script src="a0ba4cf766.js"></script>
 
   <link href='styles/lib.css' rel='stylesheet' type='text/css'>
+  <link href='styles/swiper.min.css' rel='stylesheet' type='text/css'>
   <link href='styles/app.css' rel='stylesheet' type='text/css'>
   <link href='styles/recommendation.css' rel='stylesheet'>
   <link href='styles/catalog.css' rel='stylesheet'>
@@ -382,7 +383,7 @@
         </div>
       </header>
       <div class="page-body">
-        <section class="page-header">
+        <section class="page-header page-header--mob-border">
           <div class="wrapper">
             <div class="page-header__content page-header__content--smpad">
               <div class="breadcrumbs">
@@ -401,6 +402,771 @@
             </div>
           </div>
         </section>
+        <section class="page-section hotoffers">
+          <div class="wrapper">
+            <div class="hotoffers__grid">
+              <div class="hotoffers__col hotoffers__col--33p hotoffers__col--33p-big">
+                <a href="#" class="gameset gameset--big" style="background: #006925">
+                  <h4 class="gameset__title">Распродажа <br>Grand Theft Auto</h4>
+                  <span class="gameset__text">
+                    от <b>800 руб.</b>
+                  </span>
+                  <img src="images/gs-gta.png" alt="@@" class="gameset__image">
+                </a>
+              </div>
+              <div class="hotoffers__col hotoffers__col--22p">
+                <a href="#" class="catalog-card">
+                  <span class="catalog-card__inner">
+                    <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                    <span class="catalog-card__bottom">
+                      <span class="catalog-card__price">
+                        <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                      <span class="catalog-card__discount">-50%</span>
+                    </span>
+                    <span class="catalog-card__hover">
+                      <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                        <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                </a>
+              </div>
+              <div class="hotoffers__col hotoffers__col--22p">
+                <a href="#" class="catalog-card">
+                  <span class="catalog-card__inner">
+                    <img src="images/mortalkombat.jpg" alt="@@" class="catalog-card__img">
+                    <span class="catalog-card__bottom">
+                      <span class="catalog-card__price">
+                        <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                      <span class="catalog-card__discount">-50%</span>
+                    </span>
+                    <span class="catalog-card__hover">
+                      <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                        <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="catalog-card__title"><span class="catalog-card__title-text">Mortal Kombat XL</span></span>
+                </a>
+              </div>
+              <div class="hotoffers__col hotoffers__col--22p">
+                <a href="#" class="catalog-card">
+                  <span class="catalog-card__inner">
+                    <img src="images/metro.jpg" alt="@@" class="catalog-card__img">
+                    <span class="catalog-card__bottom">
+                      <span class="catalog-card__price">
+                        <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                      <span class="catalog-card__discount">-50%</span>
+                    </span>
+                    <span class="catalog-card__hover">
+                      <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                        <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="catalog-card__title"><span class="catalog-card__title-text">Metro 2033 Redux</span></span>
+                </a>
+              </div>
+              <div class="hotoffers__col hotoffers__col--33p">
+                <a href="#" class="gameset gameset--logo" style="background: #831709">
+                  <img src="images/logo/assassinscreed_light.png" alt="@@" class="gameset__logo">
+                  <h4 class="gameset__title">Скидки Assasins Creed</h4>
+                  <span class="gameset__text">
+                    до <b>80%</b>
+                  </span>
+                </a>
+              </div>
+              <div class="hotoffers__col hotoffers__col--33p">
+                <a href="#" class="gameset gameset--logo" style="background: #1a263e">
+                  <img src="images/logo/bethesda_light.png" alt="@@" class="gameset__logo">
+                  <h4 class="gameset__title">Распродажа Ubisoft</h4>
+                  <span class="gameset__text">
+                    до <b>80%</b>
+                  </span>
+                </a>
+              </div>
+              <div class="hotoffers__col hotoffers__col--33p">
+                <a href="#" class="gameset gameset--logo" style="background: #1a1a1a">
+                  <img src="images/logo/thqnordick_light.png" alt="@@" class="gameset__logo">
+                  <h4 class="gameset__title">Распродажа THQ</h4>
+                  <span class="gameset__text">
+                    до <b>80%</b>
+                  </span>
+                </a>
+              </div>
+              <!-- 4 отдельных товара -->
+              <!--
+              <div class="hotoffers__col hotoffers__col--25p">
+                <a href="#" class="catalog-card">
+                  <span class="catalog-card__inner">
+                    <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                    <span class="catalog-card__bottom">
+                      <span class="catalog-card__price">
+                        <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                      <span class="catalog-card__discount">-50%</span>
+                    </span>
+                    <span class="catalog-card__hover">
+                      <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                        <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                </a>
+              </div>
+              <div class="hotoffers__col hotoffers__col--25p">
+                <a href="#" class="catalog-card">
+                  <span class="catalog-card__inner">
+                    <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                    <span class="catalog-card__bottom">
+                      <span class="catalog-card__price">
+                        <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                      <span class="catalog-card__discount">-50%</span>
+                    </span>
+                    <span class="catalog-card__hover">
+                      <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                        <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                </a>
+              </div>
+              <div class="hotoffers__col hotoffers__col--25p">
+                <a href="#" class="catalog-card">
+                  <span class="catalog-card__inner">
+                    <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                    <span class="catalog-card__bottom">
+                      <span class="catalog-card__price">
+                        <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                      <span class="catalog-card__discount">-50%</span>
+                    </span>
+                    <span class="catalog-card__hover">
+                      <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                        <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                </a>
+              </div>
+              <div class="hotoffers__col hotoffers__col--25p">
+                <a href="#" class="catalog-card">
+                  <span class="catalog-card__inner">
+                    <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                    <span class="catalog-card__bottom">
+                      <span class="catalog-card__price">
+                        <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                      <span class="catalog-card__discount">-50%</span>
+                    </span>
+                    <span class="catalog-card__hover">
+                      <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                        <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                </a>
+              </div>
+               -->
+              <!--  2 больших подборки -->
+              <!--
+              <div class="hotoffers__col hotoffers__col--50p">
+                <a href="#" class="gameset gameset--big" style="background: #006925">
+                  <h4 class="gameset__title">Распродажа Grand Theft Auto</h4>
+                  <span class="gameset__text">
+                    от <b>800 руб.</b>
+                  </span>
+                  <img src="images/gs-gta.png" alt="@@" class="gameset__image">
+                </a>
+              </div>
+              <div class="hotoffers__col hotoffers__col--50p">
+                <a href="#" class="gameset gameset--big" style="background: #006925">
+                  <h4 class="gameset__title">Распродажа Grand Theft Auto</h4>
+                  <span class="gameset__text">
+                    от <b>800 руб.</b>
+                  </span>
+                  <img src="images/gs-gta.png" alt="@@" class="gameset__image">
+                </a>
+              </div>
+               -->
+            </div>
+          </div>
+        </section>
+
+        <section class="page-section price-reduction js-carousel2">
+          <div class="wrapper">
+            <div class="section-heading">
+              <div class="section-heading__col section-heading__col--left">
+                <h3 class="page-title page-title--small">Снижение цен</h3>
+              </div>
+              <div class="section-heading__col section-heading__col--right">
+                <span class="slider-counter desktop-hide">
+                  <span class="slider-counter__current">1</span> / <span class="slider-counter__total">23</span>
+                </span>
+              </div>
+            </div>
+            <div class="carousel">
+              <div class="carousel__buttons">
+                <button class="carousel__button carousel__button--prev" type="button">
+                  <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="carousel__button-icon">
+                    <path d="M8 6.5L0 0V6.5V13L8 6.5Z">
+                  </svg>
+                </button>
+                <button class="carousel__button carousel__button--next" type="button">
+                  <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="carousel__button-icon">
+                    <path d="M8 6.5L0 0V6.5V13L8 6.5Z">
+                  </svg>
+                </button>
+              </div>
+              <div class="carousel__container">
+                <div class="carousel__wrapper swiper-wrapper">
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          <span class="product-slide__price">-350 Р</span>
+                          <span class="product-slide__date">13 июня</span>
+                        </div>
+                        <a href="#" class="catalog-card ">
+                          <span class="catalog-card__inner">
+                            <img src="images/fallout4.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Fallout 4</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          <span class="product-slide__price">-250 Р</span>
+                          <span class="product-slide__date">12 июня</span>
+                        </div>
+                        <a href="#" class="catalog-card ">
+                          <span class="catalog-card__inner">
+                            <img src="images/mortalkombat.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Mortal Kombat XL</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          <span class="product-slide__price">-1050 Р</span>
+                          <span class="product-slide__date">11 июня</span>
+                        </div>
+                        <a href="#" class="catalog-card ">
+                          <span class="catalog-card__inner">
+                            <img src="images/gta.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Grand Theft Auto 5</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          <span class="product-slide__price">-350 Р</span>
+                          <span class="product-slide__date">10 июня</span>
+                        </div>
+                        <a href="#" class="catalog-card ">
+                          <span class="catalog-card__inner">
+                            <img src="images/metro.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Metro 2033 Redux</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          <span class="product-slide__price">-250 Р</span>
+                          <span class="product-slide__date">10 июня</span>
+                        </div>
+                        <a href="#" class="catalog-card ">
+                          <span class="catalog-card__inner">
+                            <img src="images/fallout4.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Fallout 4</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          <span class="product-slide__price">-350 Р</span>
+                          <span class="product-slide__date">9 июня</span>
+                        </div>
+                        <a href="#" class="catalog-card ">
+                          <span class="catalog-card__inner">
+                            <img src="images/mortalkombat.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Mortal Kombat XL</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          <span class="product-slide__price">-350 Р</span>
+                          <span class="product-slide__date">9 июня</span>
+                        </div>
+                        <a href="#" class="catalog-card ">
+                          <span class="catalog-card__inner">
+                            <img src="images/gta.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Grand Theft Auto 5</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          <span class="product-slide__price">-350 Р</span>
+                          <span class="product-slide__date">9 июня</span>
+                        </div>
+                        <a href="#" class="catalog-card ">
+                          <span class="catalog-card__inner">
+                            <img src="images/metro.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                              <span class="catalog-card__discount">-50%</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="222250">222250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Metro 2033 Redux</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          <span class="product-slide__price">-350 Р</span>
+                          <span class="product-slide__date">8 июня</span>
+                        </div>
+                        <a href="#" class="catalog-card ">
+                          <span class="catalog-card__inner">
+                            <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__price catalog-card__price_full">
+                                <span><font class="currencyPrice" currency="250">250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-price"><img src="images/catalog/cart-w.svg" alt="@@">
+                                <span><font class="currencyPrice" currency="22250">22250</font><span class="rub"><font class="currencySymbol"><span class="rub">P</span></font></span></span>
+                              </span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel__slide swiper-slide">
+                      <div class="product-slide">
+                        <div class="product-slide__heading">
+                          <span class="product-slide__price">-350 Р</span>
+                          <span class="product-slide__date">8 июня</span>
+                        </div>
+                        <a href="#" class="catalog-card ">
+                          <span class="catalog-card__badge">
+                            <span class="catalog-card__badge-icon">
+                              <img src="images/svg/collection.svg" alt="Сборники" width="11" height="12">
+                            </span>
+                            <span class="catalog-card__badge-text">Сборники</span>
+                          </span>
+                          <span class="catalog-card__inner">
+                            <img src="images/catalog/game.jpg" alt="@@" class="catalog-card__img">
+                            <span class="catalog-card__bottom">
+                              <span class="catalog-card__notavailable">Нет в наличии</span>
+                            </span>
+                            <span class="catalog-card__hover">
+                              <span class="catalog-card__hover-notavailable">Нет в наличии</span>
+                            </span>
+                          </span>
+                          <span class="catalog-card__title"><span class="catalog-card__title-text">Rise of the Tomb Raider</span></span>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-section discount-groups">
+          <div class="wrapper">
+            <div class="section-heading">
+              <h3 class="page-title page-title--small">Скидки от издателей</h3>
+            </div>
+            <div class="grid grid--sm10">
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/ubisoft.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>80%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/thqnordick.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>30%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/bethesda.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>40%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/konami.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>40%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/sega.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>40%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/2kgames.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>10%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/paradox.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>40%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/blizzard.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>40%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/daedalic.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>80%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/codemasters.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>30%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/cdproject.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>10%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/deepsilver.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>30%</b></div>
+                </a>
+              </div>
+            </div>
+            <a href="#" class="btn btn--long btn--noborder discount-groups__more  js-discount-showmore">
+              Показать еще
+            </a>
+          </div>
+        </section>
+
+        <section class="page-section selected-discounts">
+          <div class="wrapper">
+            <div class="section-heading">
+              <h3 class="page-title page-title--small">Избранные скидки</h3>
+            </div>
+            <div class="grid grid--10-xl-20">
+              <div class="grid__col grid__col--12 grid__col--lg_4">
+                <a href="#" class="gameset gameset--image" style="background: #2f3038">
+                  <h4 class="gameset__title gameset__title--big">90%</h4>
+                  <span class="gameset__text">
+                    <b>100</b> товаров
+                  </span>
+                  <img src="images/gasmask.png" alt="@@" class="gameset__image" style="right: -80px">
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--lg_4">
+                <a href="#" class="gameset gameset--image" style="background: #0f0f0f">
+                  <h4 class="gameset__title gameset__title--big">80%</h4>
+                  <span class="gameset__text">
+                    <b>200</b> товаров
+                  </span>
+                  <img src="images/gasmask.png" alt="@@" class="gameset__image" style="right: calc(100%  - 80px)">
+                  <img src="images/darklord.png" alt="@@" class="gameset__image" style="bottom: calc(-100% - 20px)">
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--lg_4">
+                <a href="#" class="gameset gameset--image" style="background: #ffc608">
+                  <h4 class="gameset__title gameset__title--big">75%</h4>
+                  <span class="gameset__text">
+                    <b>300</b> товаров
+                  </span>
+                  <img src="images/mkscorpion.png" alt="@@" class="gameset__image" style="bottom: calc(-100% - 20px)">
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--lg_4">
+                <a href="#" class="gameset gameset--image" style="background: #0f0f0f">
+                  <h4 class="gameset__title gameset__title--big">60%</h4>
+                  <span class="gameset__text">
+                    <b>200</b> товаров
+                  </span>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--lg_4">
+                <a href="#" class="gameset gameset--image" style="background: #a20019">
+                  <h4 class="gameset__title gameset__title--big">50%</h4>
+                  <span class="gameset__text">
+                    <b>120</b> товаров
+                  </span>
+                  <img src="images/darklord.png" alt="@@" class="gameset__image">
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--lg_4">
+                <a href="#" class="gameset gameset--image" style="background: #0f0f0f">
+                  <h4 class="gameset__title gameset__title--big">33%</h4>
+                  <span class="gameset__text">
+                    <b>200</b> товаров
+                  </span>
+                  <img src="images/mkscorpion.png" alt="@@" class="gameset__image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="page-section discount-groups">
+          <div class="wrapper">
+            <div class="section-heading">
+              <h3 class="page-title page-title--small">Скидки на серии игр</h3>
+            </div>
+            <div class="grid grid--sm10">
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/callofduty.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>80%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/battlefield.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>30%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/farcry.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>40%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/tomclancy.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>40%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/bioshock.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>40%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/companyofheroes.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>10%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/gta.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>40%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/lego.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>40%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/mortalkombat.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>80%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/deponia.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>30%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/nba2k.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>10%</b></div>
+                </a>
+              </div>
+              <div class="grid__col grid__col--12 grid__col--sm_4 grid__col--lg_3 grid__col--xl_2">
+                <a href="#" class="discountset">
+                  <div class="discountset__heading">
+                    <img src="images/logo/starcraft.png" alt="@@" class="discountset__logo">
+                  </div>
+                  <div class="discountset__describe">до <b>30%</b></div>
+                </a>
+              </div>
+            </div>
+            <a href="#" class="btn btn--long btn--noborder discount-groups__more  js-discount-showmore">
+              Показать еще
+            </a>
+          </div>
+        </section>
+
       </div>
 
       <section class="online-sells">
@@ -641,6 +1407,9 @@
     <script src="scripts/lib.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/currency.js"></script>
+    <!-- Swiper slider https://idangero.us/swiper/ -->
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/sliders.js"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
     (function(d, w, c) {

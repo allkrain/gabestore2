@@ -2,6 +2,18 @@
   border-width: 0;
 }
 
+@media screen and (min-width: 481px) {
+  .grid--sm10 {
+    margin-top: -10px;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .grid--sm10 .grid__col {
+    padding: 10px 5px 0;
+  }
+}
+
 @media screen and (min-width: 1021px) {
 
   .desktop-hide {
@@ -26,17 +38,21 @@
   margin-bottom: 60px;
 }
 
-.page-header--bordered {
-  border: 1px solid rgba(0, 0, 0, 0.04);
-}
-
 .page-header__content--smpad {
   padding: 25px 0 28px;
+}
+
+.page-header--mob-border {
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 @media screen and (min-width: 1021px) {
   .page-header__content--smpad {
     padding: 20px 0 28px;
+  }
+
+  .page-header--mob-border {
+    border: none;
   }
 }
 
@@ -67,7 +83,7 @@
   align-items: center;
   width: 100%;
   padding-bottom: 30px;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
@@ -295,6 +311,10 @@
   padding-top: 15px;
 }
 
+.sorting-panel__btn input {
+  display: none;
+}
+
 .sorting-panel__btn-text {
   display: inline-block;
   box-sizing: border-box;
@@ -406,8 +426,13 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 88px;
-  padding-right: 88px;
+  padding-left: 78px;
+  padding-right: 78px;
+}
+
+.carousel__container {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .carousel__buttons {
@@ -478,6 +503,11 @@
     padding-right: 0;
   }
 
+  .carousel__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .carousel__buttons {
     left: 50%;
     width: calc(100% + 220px);
@@ -497,4 +527,308 @@
   color: #000;
   box-sizing: border-box;
   padding: 0 0 24px;
+}
+
+.product-slide__price {
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+}
+
+.product-slide__price:not(:last-child) {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.product-slide__date {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 480px) {
+  .product-slide__heading {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
+.hotoffers {
+  padding-top: 19px;
+}
+
+.hotoffers__grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  width: auto;
+  margin: 0 -10px;
+}
+
+.hotoffers__grid:first-child {
+  margin-top: -10px;
+}
+
+.hotoffers__col {
+  display: flex;
+  padding: 10px 10px 0;
+}
+
+.hotoffers__col--22p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 50%;
+}
+
+.hotoffers__col--25p {
+  width: 50%;
+}
+
+.hotoffers__col--33p {
+  width: 100%;
+}
+
+.hotoffers__col--50p {
+  width: 100%;
+}
+
+@media screen and (min-width: 481px) {
+  .hotoffers__col--22p {
+    width: 33.33%;
+  }
+
+  .hotoffers__col--33p {
+    width: 100%;
+  }
+
+  .hotoffers__col--33p-big {
+    width: 100%;
+  }
+
+  .hotoffers__col--50p {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 631px) {
+  .hotoffers__col--25p {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 861px) {
+  .hotoffers {
+    padding-top: 5px;
+  }
+
+  .hotoffers__grid:first-child {
+    margin-top: -20px;
+  }
+
+  .hotoffers__col {
+    padding-top: 20px;
+  }
+
+  .hotoffers__col--22p {
+    padding-bottom: 0;
+    width: 22.22%;
+  }
+
+  .hotoffers__col--33p {
+    width: 33.33%;
+  }
+
+  .hotoffers__col--33p-big {
+    width: 33.33%;
+  }
+}
+
+.gameset {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  padding: 33px 45px 45px;
+  transition: all .3s ease;
+}
+
+.gameset:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -5px, 0);
+  padding-left: 55px;
+}
+
+.gameset--big {
+  padding: 43px 45px 36%;
+}
+
+.gameset__image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+}
+
+.gameset--big .gameset__image {
+  right: -45px;
+  bottom: -35px;
+  transform: scale(1.1);
+}
+
+.gameset--image .gameset__image {
+  max-height: 200%;
+}
+
+.gameset__logo {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  max-height: 100%;
+  width: 145px;
+  height: auto;
+  margin-bottom: 17px;
+}
+
+.gameset__title {
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 22px;
+}
+
+.gameset__title--big {
+  font-size: 35px;
+}
+
+.gameset__text {
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.gameset__text b {
+  font-weight: 700;
+}
+
+.gameset--big .gameset__title {
+  max-width: 230px;
+}
+
+.gameset--big .gameset__text {
+  max-width: 230px;
+}
+
+@media screen and (min-width: 631px) {
+
+  .gameset__title {
+    font-size: 24px;
+    margin-bottom: 17px;
+  }
+
+  .gameset__title--big {
+    font-size: 35px;
+  }
+}
+
+.price-reduction {
+  margin-bottom: 52px;
+}
+
+@media screen and (min-width: 1021px) {
+  .gameset--big .gameset__image {
+    right: 0;
+    bottom: 0;
+  }
+
+  .price-reduction {
+    margin-bottom: 43px;
+  }
+
+  .price-reduction .product-slide__heading {
+    padding-bottom: 16px;
+  }
+}
+
+.discount-groups .grid__col.is-hide {
+  display: none;
+}
+
+.discount-groups__more {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 1169px) {
+  .discount-groups__more {
+    display: none;
+  }
+}
+
+.discountset {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.discountset.is-hide {
+  display: none;
+}
+
+.discountset__heading {
+  display: block;
+  box-sizing: border-box;
+  padding: 18px 5px 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+  transition: all .3s ease;
+}
+
+.discountset:hover .discountset__heading {
+  background-color: #ffc608;
+}
+
+.discountset__logo {
+  display: inline-block;
+  line-height: 0;
+  width: 145px;
+  max-width: calc(100% - 10px);
+  height: auto;
+  transition: all .3s ease;
+  opacity: .5;
+}
+
+.discountset:hover .discountset__logo {
+  opacity: 1;
+}
+
+.discountset__describe {
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  padding: 8px 5px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  opacity: .5;
+  transition: all .3s ease;
+}
+
+.discountset:hover .discountset__describe {
+  opacity: 1;
+  background-color: rgba(255, 198, 8, 0.8);
+}
+
+.discountset__describe b {
+  font-weight: 700;
 }
