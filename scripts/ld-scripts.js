@@ -200,3 +200,89 @@ var priceReductionSlider = new Swiper('.js-carousel2 .carousel__container', {
     },
   },
 });
+
+
+var discountFilsterSlider = new Swiper('.js-filter-slider .discount-filter__slider', {
+  speed: 500,
+  slidesPerView: 'auto',
+  freeMode: true,
+  navigation: {
+    disabledClass: 'is-disabled',
+  },
+  on: {
+    init: function() {
+      var sw = this;
+      var slides = sw.slides;
+      var el = sw.el;
+      var parentEl = $(el).closest('.js-filter-slider');
+      var buttonNext = $(parentEl).find('.discount-filter__button--next');
+      var buttonPrev = $(parentEl).find('.discount-filter__button--prev');
+      var params = sw.params;
+      params.navigation.nextEl = buttonNext;
+      params.navigation.prevEl = buttonPrev;
+      sw.update();
+    },
+  },
+});
+
+$('.js-filter-slider').each(function (i, el) {
+  var discountRanges = $(el).find('.discount-filter__slide');
+  $(discountRanges).each(function (ix, elem) {
+    $(elem).attr('data-index', ix);
+  });
+
+  var minRange = 0;
+  var maxRange = discountRanges.length - 1;
+
+  var range = $(el).find('.discount-filter__range')[0];
+  function rangeWidth () {
+    var baseWidth = 94;
+    var rangeWidth;
+    if ($(window).width() > 630) {
+      baseWidth = 126;
+      rangeWidth = baseWidth * discountRanges.length;
+      $(range).css({ width: rangeWidth + 'px' });
+    } else {
+      rangeWidth = baseWidth * discountRanges.length;
+      $(range).css({ width: rangeWidth + 'px' });
+    }
+  }
+  rangeWidth();
+  $(window).on('resize', rangeWidth);
+  noUiSlider.create(range, {
+    range: {
+  		'min': minRange,
+  		'max': maxRange,
+  	},
+    start: 0,
+    animate: true,
+  });
+  range.noUiSlider.on('change', function (val) {
+    var currentIndex = Math.round(Number(val[0]));
+    var slider = $(el).find('.discount-filter__slider');
+    var currentSlide = $(el).find('.discount-filter__slide[data-index="' + currentIndex + '"]').click();
+    slider[0].swiper.slideTo(currentIndex);
+  });
+  $(window).on('resize', function () {
+    var slider = $(el).find('.discount-filter__slider');
+    slider[0].swiper.update();
+  });
+});
+
+$(document).on('change', '.discount-filter__radio', function () {
+  var self = this;
+  var parent = $(this).closest('.discount-filter__slide');
+  var siblings = $(parent).siblings('.discount-filter__slide');
+  var index = $(parent).attr('data-index');
+  var range = $(parent).closest('.js-filter-slider').find('.discount-filter__range')[0];
+  if ($(self).prop('checked')) {
+    $(siblings).removeClass('is-active');
+    $(siblings).removeClass('is-sibling');
+    $(parent).next('.discount-filter__slide').addClass('is-sibling');
+    $(parent).prev('.discount-filter__slide').addClass('is-sibling');
+    $(parent).removeClass('is-sibling').addClass('is-active');
+    range.noUiSlider.set(index);
+  } else {
+    $(parent).removeClass('is-active');
+  }
+});

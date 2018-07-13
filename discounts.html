@@ -1179,9 +1179,56 @@
                 </span>
               </div>
             </div>
-            <div class="discount-filter">
-
-            </div>
+            <form class="discount-filter js-filter-slider">
+              <div class="discount-filter__buttons">
+                <button class="discount-filter__button discount-filter__button--prev" type="button">
+                  <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-filter__button-icon">
+                    <path d="M8 6.5L0 0V6.5V13L8 6.5Z">
+                  </svg>
+                </button>
+                <button class="discount-filter__button discount-filter__button--next" type="button">
+                  <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="discount-filter__button-icon">
+                    <path d="M8 6.5L0 0V6.5V13L8 6.5Z">
+                  </svg>
+                </button>
+              </div>
+              <div class="discount-filter__slider">
+                <div class="discount-filter__wrapper swiper-wrapper">
+                  <label class="discount-filter__slide swiper-slide is-active">
+                    <input type="radio" name="discountRange" value="1" class="discount-filter__radio" checked>
+                    <span class="discount-filter__label">
+                      5 - 10%
+                    </span>
+                  </label>
+                  <label class="discount-filter__slide swiper-slide">
+                    <input type="radio" name="discountRange" value="2" class="discount-filter__radio">
+                    <span class="discount-filter__label">
+                      15 - 20%
+                    </span>
+                  </label>
+                  <label class="discount-filter__slide swiper-slide">
+                    <input type="radio" name="discountRange" value="3" class="discount-filter__radio">
+                    <span class="discount-filter__label">
+                      25 - 30%
+                    </span>
+                  </label>
+                  <label class="discount-filter__slide swiper-slide">
+                    <input type="radio" name="discountRange" value="4" class="discount-filter__radio">
+                    <span class="discount-filter__label">
+                      35 - 40%
+                    </span>
+                  </label>
+                  <label class="discount-filter__slide swiper-slide">
+                    <input type="radio" name="discountRange" value="5" class="discount-filter__radio">
+                    <span class="discount-filter__label">
+                      45 - 50%
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="discount-filter__range">
+              </div>
+            </form>
             <div class="catalog-cards">
 
               <div class="catalog-col">
@@ -1739,7 +1786,7 @@
     <script src="scripts/currency.js"></script>
     <!-- Swiper slider https://idangero.us/swiper/ -->
     <script src="scripts/swiper.min.js"></script>
-    <script src="scripts/sliders.js"></script>
+    <script src="scripts/ld-scripts.js"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
     (function(d, w, c) {
