@@ -689,10 +689,6 @@
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: auto;
   margin: 0 -10px;
 }
@@ -1103,6 +1099,7 @@
   cursor: pointer;
   outline: none;
   border: none;
+  user-select: none;
 }
 
 .discount-filter__button--prev {
@@ -1141,12 +1138,13 @@
   padding: 5px;
   font-size: 14px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0);
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
   text-align: center;
   min-width: 76px;
   cursor: pointer;
+  user-select: none;
 }
 
 .discount-filter__radio {
@@ -1160,6 +1158,10 @@
 
 .discount-filter__slide.is-sibling .discount-filter__label {
   color: rgba(0, 0, 0, 0.4);
+}
+
+.discount-filter__slide.is-sibling2 .discount-filter__label {
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .discount-filter__range {
@@ -1241,18 +1243,18 @@
   }
 
   .discount-filter__slide {
-    margin: 0 25px;
+    margin: 0 23px;
   }
 
   .discount-filter__range {
-    padding: 0 62px;
+    padding: 0 61px;
     left: 0;
     max-width: 100%;
   }
 
   .discount-filter__range .noUi-handle {
-    width: 124px !important;
-    left: -62px !important;
+    width: 122px !important;
+    left: -61px !important;
   }
 }
 

@@ -202,13 +202,16 @@ var priceReductionSlider = new Swiper('.js-carousel2 .carousel__container', {
 });
 
 
-var discountFilsterSlider = new Swiper('.js-filter-slider .discount-filter__slider', {
+var discountFilterSlider = new Swiper('.js-filter-slider .discount-filter__slider', {
   speed: 500,
   slidesPerView: 'auto',
   freeMode: true,
   navigation: {
     disabledClass: 'is-disabled',
   },
+  shortSwipes: false,
+  longSwipes: false,
+  allowTouchMove: false,
   on: {
     init: function() {
       var sw = this;
@@ -231,6 +234,17 @@ $('.js-filter-slider').each(function (i, el) {
     $(elem).attr('data-index', ix);
   });
 
+  function siblingsPreSet() {
+    var checkedElem = $(el).find('.discount-filter__radio:checked').closest('.discount-filter__slide');
+    $(checkedElem).addClass('is-active');
+    $(checkedElem).next('.discount-filter__slide').addClass('is-sibling');
+    $(checkedElem).next('.discount-filter__slide').next('.discount-filter__slide').addClass('is-sibling2');
+    $(checkedElem).prev('.discount-filter__slide').addClass('is-sibling');
+    $(checkedElem).prev('.discount-filter__slide').prev('.discount-filter__slide').addClass('is-sibling2');
+  }
+  siblingsPreSet();
+
+  var startP = $(el).find('.discount-filter__radio:checked').closest('.discount-filter__slide').attr('data-index');
   var minRange = 0;
   var maxRange = discountRanges.length - 1;
 
@@ -239,7 +253,7 @@ $('.js-filter-slider').each(function (i, el) {
     var baseWidth = 94;
     var rangeWidth;
     if ($(window).width() > 630) {
-      baseWidth = 126;
+      baseWidth = 122;
       rangeWidth = baseWidth * discountRanges.length;
       $(range).css({ width: rangeWidth + 'px' });
     } else {
@@ -254,7 +268,7 @@ $('.js-filter-slider').each(function (i, el) {
   		'min': minRange,
   		'max': maxRange,
   	},
-    start: 0,
+    start: startP,
     animate: true,
   });
   range.noUiSlider.on('change', function (val) {
@@ -267,6 +281,13 @@ $('.js-filter-slider').each(function (i, el) {
     var slider = $(el).find('.discount-filter__slider');
     slider[0].swiper.update();
   });
+
+  $(el).find('.discount-filter__button--next').on('click', function () {
+    $(el).find('.discount-filter__slide.is-active').next('.discount-filter__slide')[0].click();
+  });
+    $(el).find('.discount-filter__button--prev').on('click', function () {
+    $(el).find('.discount-filter__slide.is-active').prev('.discount-filter__slide')[0].click();
+  });
 });
 
 $(document).on('change', '.discount-filter__radio', function () {
@@ -278,9 +299,12 @@ $(document).on('change', '.discount-filter__radio', function () {
   if ($(self).prop('checked')) {
     $(siblings).removeClass('is-active');
     $(siblings).removeClass('is-sibling');
+    $(siblings).removeClass('is-sibling2');
     $(parent).next('.discount-filter__slide').addClass('is-sibling');
+    $(parent).next('.discount-filter__slide').next('.discount-filter__slide').addClass('is-sibling2');
     $(parent).prev('.discount-filter__slide').addClass('is-sibling');
-    $(parent).removeClass('is-sibling').addClass('is-active');
+    $(parent).prev('.discount-filter__slide').prev('.discount-filter__slide').addClass('is-sibling2');
+    $(parent).removeClass('is-sibling').removeClass(' is-sibling2').addClass('is-active');
     range.noUiSlider.set(index);
   } else {
     $(parent).removeClass('is-active');
